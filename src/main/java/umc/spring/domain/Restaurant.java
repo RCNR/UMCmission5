@@ -25,7 +25,10 @@ public class Restaurant extends BaseEntity {
     private String address;
 
     @Column(nullable = false)
-    private String description;
+    private Float score;
+
+    /* @Column(nullable = false)
+    private String description; */
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "region_id")
@@ -36,4 +39,14 @@ public class Restaurant extends BaseEntity {
 
     @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL)
     private List<Review> reviewList = new ArrayList<>();
+
+    @Override
+    public String toString() {
+        return "Restaurant{" +
+                ", name='" + address + '\'' +
+                ", address='" + address + '\'' +
+                ", score='" + score +
+                ", region='" + (region != null ? region.getName() : "N/A") +
+                '}';
+    }
 }
