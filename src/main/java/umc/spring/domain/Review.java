@@ -19,7 +19,7 @@ public class Review extends BaseEntity {
     private Long id;
 
     @Column(nullable = false)
-    private Float star;
+    private Float score;
 
     @Column(nullable = false)
     private String content;
