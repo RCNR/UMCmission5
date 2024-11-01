@@ -1,2 +1,15 @@
 # UMCmission5
-umc미션 5주차 과제
+umc미션 과제
+
+### 📋 Commit Message Convention
+|   Gitmoji    |    Tag     | Description |
+|:------------:|:----------:| --- |
+|      ✨       |   `feat`   | 새로운 기능 추가 |
+|      🐛      |   `fix`    | 버그 수정 |
+|      📝      |   `docs`   | 문서 추가, 수정, 삭제 |
+|      ✅       |   `test`   | 테스트 코드 추가, 수정, 삭제 |
+|      💄      |  `style`   | 코드 형식 변경 |
+|      ♻️      | `refactor` | 코드 리팩토링 |
+|      ⚡️      |   `perf`   | 성능 개선 |
+|      💚      |    `ci`    | CI 관련 설정 수정 |
+|      🚀      |  `chore`   | 기타 변경사항 |
