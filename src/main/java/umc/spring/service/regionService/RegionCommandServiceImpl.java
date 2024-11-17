@@ -16,7 +16,7 @@ public class RegionCommandServiceImpl implements RegionCommandService {
     private final RegionRepository regionRepository;
 
     @Override
-    public Region joinRegion(RegionRequestDTO.JoinDTO request) {
+    public Region joinRegion(RegionRequestDTO.CreateRegionDTO request) {
 
         Region region = RegionConverter.toRegion(request);
         return regionRepository.save(region);

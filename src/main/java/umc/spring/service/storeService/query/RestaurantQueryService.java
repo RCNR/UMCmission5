@@ -1,11 +1,11 @@
-package umc.spring.service.storeService;
+package umc.spring.service.storeService.query;
 
 import umc.spring.domain.Restaurant;
 
 import java.util.List;
 import java.util.Optional;
 
-public interface StoreQueryService {
+public interface RestaurantQueryService {
 
     Optional<Restaurant> findRestaurant(Long id);
 

@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
-import umc.spring.service.storeService.StoreQueryService;
+import umc.spring.service.storeService.query.RestaurantQueryService;
 
 @SpringBootApplication
 @EnableJpaAuditing
@@ -19,7 +19,7 @@ public class Application {
 	@Bean
 	public CommandLineRunner run(ApplicationContext context) {
 		return args -> {
-			StoreQueryService storeService = context.getBean(StoreQueryService.class);
+			RestaurantQueryService storeService = context.getBean(RestaurantQueryService.class);
 
 			// 파라미터 값 설정
 			String name = "요아정";

@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 public class RegionConverter {
 
 
-    public static Region toRegion(RegionRequestDTO.JoinDTO request) {
+    public static Region toRegion(RegionRequestDTO.CreateRegionDTO request) {
         return Region.builder()
                 .name(request.getName())
                 .build();
