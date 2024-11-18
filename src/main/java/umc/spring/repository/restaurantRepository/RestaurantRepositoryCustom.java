@@ -1,10 +1,10 @@
-package umc.spring.repository.storeRepository;
+package umc.spring.repository.restaurantRepository;
 
 import umc.spring.domain.Restaurant;
 
 import java.util.List;
 
-public interface StoreRepositoryCustom {
+public interface RestaurantRepositoryCustom {
 
     List<Restaurant> dynamicQueryWithBooleanBuilder(String name, Float score);
 }

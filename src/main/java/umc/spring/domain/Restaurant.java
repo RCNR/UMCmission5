@@ -2,6 +2,7 @@ package umc.spring.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.ColumnDefault;
 import umc.spring.common.BaseEntity;
 
 import java.util.ArrayList;
@@ -24,7 +25,7 @@ public class Restaurant extends BaseEntity {
     @Column(nullable = false, length = 40)
     private String address;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Float score;
 
     /* @Column(nullable = false)

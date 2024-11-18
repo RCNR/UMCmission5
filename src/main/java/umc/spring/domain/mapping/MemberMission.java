@@ -20,7 +20,7 @@ public class MemberMission extends BaseEntity {
 
     @Enumerated(EnumType.STRING)
     @Column(columnDefinition = "VARCHAR(15) DEFAULT 'UNFINISHED'")
-    private MissionStatus status;
+    private MissionStatus status; // unfinished, finished
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "mission_id")
