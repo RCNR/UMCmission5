@@ -9,18 +9,19 @@ import umc.spring.domain.Restaurant;
 import umc.spring.service.foodCategoryServvice.FoodCategoryService;
 import umc.spring.service.storeService.query.RestaurantQueryService;
 import umc.spring.validation.annotation.ExistCategories;
+import umc.spring.validation.annotation.ExistRestaurant;
 
 import java.util.List;
 import java.util.Optional;
 
 @Component
 @RequiredArgsConstructor
-public class RestaurantExistValidator implements ConstraintValidator<ExistCategories, Long> {
+public class RestaurantExistValidator implements ConstraintValidator<ExistRestaurant, Long> {
 
     private final RestaurantQueryService restaurantQueryService;
 
     @Override
-    public void initialize(ExistCategories constraintAnnotation) {
+    public void initialize(ExistRestaurant constraintAnnotation) {
         ConstraintValidator.super.initialize(constraintAnnotation);
     }
 

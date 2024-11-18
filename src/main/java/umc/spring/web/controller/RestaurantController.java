@@ -2,6 +2,7 @@ package umc.spring.web.controller;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import umc.spring.apiPayload.ApiResponse;
 import umc.spring.converter.RestaurantConverter;
@@ -19,7 +20,8 @@ public class RestaurantController {
     private final RestaurantCommandService restaurantCommandService;
 
     @PostMapping("/")
-    public ApiResponse<RestaurantResponseDTO.CreateRestaurantResponseDTO> createRestaurant(@RequestBody @Valid RestaurantRequestDTO.CreateRestaurantDTO dto) {
+    public ApiResponse<RestaurantResponseDTO.CreateRestaurantResponseDTO> createRestaurant
+            (@Valid @RequestBody RestaurantRequestDTO.CreateRestaurantDTO dto) {
 
         Restaurant saveRestaurant = restaurantCommandService.createRestaurant(dto);
 
