@@ -2,6 +2,7 @@ package umc.spring.web.controller;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +16,7 @@ import umc.spring.web.dto.reviewDTO.ReviewResponseDTO;
 
 @RestController
 @RequiredArgsConstructor
+@Validated
 @RequestMapping("/reviews")
 public class ReviewController {
 
@@ -22,7 +24,8 @@ public class ReviewController {
     private final ReviewCommandService reviewCommandService;
 
     @PostMapping("/")
-    public ApiResponse<ReviewResponseDTO.CreateReviewResponseDTO> createReview(@Valid @RequestBody ReviewRequestDTO.CreateReviewDTO dto) {
+    public ApiResponse<ReviewResponseDTO.CreateReviewResponseDTO> createReview(
+            @Valid @RequestBody ReviewRequestDTO.CreateReviewDTO dto) {
 
         Review review = reviewCommandService.createReview(dto);
 
