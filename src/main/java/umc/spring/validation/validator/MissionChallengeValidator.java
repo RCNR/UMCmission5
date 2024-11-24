@@ -10,7 +10,8 @@ import umc.spring.web.dto.missionChallengeDTO.MissionChallengeRequest;
 
 @Component
 @RequiredArgsConstructor
-public class MissionChallengeValidator implements ConstraintValidator<ValidMissionChallenge, MissionChallengeRequest.MissionChallenge> {
+public class MissionChallengeValidator implements ConstraintValidator<
+        ValidMissionChallenge, MissionChallengeRequest.MissionChallenge> {
 
     private final MemberMissionRepository memberMissionRepository;
 

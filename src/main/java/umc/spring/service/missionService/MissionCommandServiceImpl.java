@@ -24,8 +24,10 @@ public class MissionCommandServiceImpl implements MissionCommandService {
     @Transactional
     public MemberMission challengeMission(Long missionId, Long memberId) {
 
-        Mission mission = missionRepository.findById(missionId).orElseThrow(() -> new IllegalArgumentException("없는 missionId"));
-        Member member = memberRepository.findById(memberId).orElseThrow(() -> new MemberHandler(ErrorStatus.MEMBER_NOT_FOUND));
+        Mission mission = missionRepository.findById(missionId).orElseThrow(
+                () -> new IllegalArgumentException("없는 missionId"));
+        Member member = memberRepository.findById(memberId).orElseThrow(
+                () -> new MemberHandler(ErrorStatus.MEMBER_NOT_FOUND));
 
         MemberMission memberMission = MemberMission.builder()
                 .member(member)
