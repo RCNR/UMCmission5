@@ -10,7 +10,7 @@ import java.lang.annotation.*;
 @Constraint(validatedBy = CheckPageValidator.class)
 @Target( { ElementType.METHOD, ElementType.FIELD, ElementType.PARAMETER })
 @Retention(RetentionPolicy.RUNTIME)
-public @interface checkPage {
+public @interface CheckPage {
     String message() default "페이지 수가 적습니다.";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
