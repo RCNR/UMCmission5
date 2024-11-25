@@ -59,7 +59,6 @@ public class RestaurantController {
             @RequestParam(name = "page") Integer page) {
 
         Page<Review> reviewList = restaurantQueryService.getReviewList(restaurantId, page);
-        reviewList.stream().forEach(res -> System.out.println(res.getMember().getId()));
         return ApiResponse.onSuccess(ReviewConverter.reviewPreviewListDTO(reviewList));
     }
 }
