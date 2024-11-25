@@ -24,6 +24,8 @@ public class Review extends BaseEntity {
     @Column(nullable = false)
     private String content;
 
+    private String body;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "restaurant_id")
     private Restaurant restaurant;

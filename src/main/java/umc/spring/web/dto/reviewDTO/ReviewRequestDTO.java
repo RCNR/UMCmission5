@@ -1,15 +1,21 @@
 package umc.spring.web.dto.reviewDTO;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import umc.spring.validation.annotation.ExistRestaurant;
+
+import java.time.LocalDate;
 
 public class ReviewRequestDTO {
 
     @Getter
     public static class CreateReviewDTO {
 
-        @NotBlank
+        @NotNull
         private Float score;
 
         @NotBlank
@@ -18,7 +24,7 @@ public class ReviewRequestDTO {
         @ExistRestaurant
         private Long restaurantId;
 
-        @NotBlank
+        @NotNull
         private Long memberId;
     }
 }
