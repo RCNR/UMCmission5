@@ -4,15 +4,15 @@ import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import umc.spring.validation.annotation.checkPage;
+import umc.spring.validation.annotation.CheckPage;
 
 @Component
 @RequiredArgsConstructor
-public class CheckPageValidator implements ConstraintValidator<checkPage, Integer> {
+public class CheckPageValidator implements ConstraintValidator<CheckPage, Integer> {
 
 
     @Override
-    public void initialize(checkPage constraintAnnotation) {
+    public void initialize(CheckPage constraintAnnotation) {
         ConstraintValidator.super.initialize(constraintAnnotation);
     }
 
