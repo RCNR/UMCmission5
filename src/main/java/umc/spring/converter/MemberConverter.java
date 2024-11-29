@@ -38,8 +38,12 @@ public class MemberConverter {
                 .address(request.getAddress())
                 .gender(gender)
                 .name(request.getName())
+                .email(request.getEmail())
+                .password(request.getPassword())
+                .role(request.getRole())
                 .memberPreferList(new ArrayList<>())
                 .build();
     }
+
 }
 
