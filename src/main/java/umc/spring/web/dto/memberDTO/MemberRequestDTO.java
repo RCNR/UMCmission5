@@ -44,8 +44,8 @@ public class MemberRequestDTO {
         @Size(min = 5, max = 12)
         String specAddress;
 
-//        @ExistCategories
-//        List<Long> preferCategory;
+        @ExistCategories
+        List<Long> preferCategory;
 
         @NotNull
         Role role;
